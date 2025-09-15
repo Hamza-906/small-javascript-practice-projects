@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+
+    <!-- Custom CSS link  -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <div class="main">
+        <h1>Random Quiz App</h1>
+        <div id="box">
+            <h2 id="quebox"> 1- This is the dummy question?</h2>
+            <div class="row">
+                <input class="options" id="option1" type="radio" value="a" name="option">
+                <label for="option1">Option 1</label>
+            </div>
+            <div class="row">
+                <input class="options" id="option2" type="radio" value="b" name="option">
+                <label for="option2">Option 2</label>
+            </div>
+            <div class="row">
+                <input class="options" id="option3" type="radio" value="c" name="option">
+                <label for="option3">Option 3</label>
+            </div>
+            <div class="row">
+                <input class="options" id="option4" type="radio" value="d" name="option">
+                <label for="option4">Option 4</label>
+            </div>
+            <div class="buttons">
+                <button class="btn" onclick="previousQuiz()">Previous << </button>
+                <button class="btn" onclick="submitQuiz()">Submit</button>
+                <button class="btn" onclick="nextQuiz()">Next >> </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript link file  -->
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
