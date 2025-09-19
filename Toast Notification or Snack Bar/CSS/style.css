@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+  width: 100%;
+  height: 100vh;
+}
+
+.buttons {
+  margin: 50px;
+}
+
+.buttons button {
+  background: #fff;
+  color: #333;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 120px;
+  height: 40px;
+  margin: 5px;
+  transition: 0.5s ease;
+}
+
+.buttons #success:hover {
+  background: rgba(0, 128, 0, 0.836);
+  color: #fff;
+}
+.buttons #error:hover {
+  background: rgba(255, 0, 0, 0.856);
+  color: #fff;
+}
+.buttons #invalid:hover {
+  background: rgba(255, 166, 0, 0.884);
+  color: #fff;
+}
+
+#toastBox {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+
+}
+
+.toast {
+  width: 400px;
+  height: 80px;
+  position: relative;
+  background: #fff;
+  color: #333;
+  font-weight: 500;
+  margin: 15px 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  transform: translateX(100%);
+  animation: moveLeft 0.5s linear forwards;
+}
+
+@keyframes moveLeft{
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.toast i {
+  margin: 0 20px;
+  font-size: 35px;
+  color: green;
+}
+
+.toast.error i {
+  color: red;
+}
+
+.toast.invalid i {
+  color: orange;
+}
+
+.toast::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background: green;
+  animation: anim 6s linear forwards;
+}
+
+.toast.error::after {
+  background: red;
+}
+
+.toast.invalid::after {
+  background: orange;
+}
+
+@keyframes anim {
+  100% {
+    width: 0%;
+  }
+}
+
+
+
+     /* Mobile Responsive */
+     
+@media (max-width: 490px){
+  .toast {
+  width: 300px;
+  height: 70px;
+  font-weight: 400;
+}
+
+.toast i {
+  font-size: 30px;
+}
+
+}
+
+@media (max-width: 476px){
+    .toast {
+  width: 250px;
+  height: 60px;
+  font-weight: 300;
+  font-size: 0.7rem;
+}
+
+.toast i {
+  font-size: 25px;
+}
+
+#toastBox {
+  padding: 15px;
+}
+}
