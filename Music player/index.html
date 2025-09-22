@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <!-- Custom CSS link  -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+    <!-- font Aosome icons  -->
+    <script src="https://kit.fontawesome.com/7a2abe87bc.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle">
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+                <div class="circle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <img src="images/Atif Aslam.jpeg" class="song-img">
+            <h1><span>Title: </span>Ma Rang Sharbaton ka</h1>
+            <p><span>Artist: </span>Atif Aslam</p>
+            <audio id="song">
+                <source src="Music/Main Rang Sharbaton Ka Phata Poster Nikhla Hero 320 Kbps.mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" value="0" id="progress">
+            <div class="time-line">
+            <p id="total-duration">12:00</p>
+            <p id="curr-duration">04:35</p>
+            </div>
+            <div class="controls">
+                <div><i class="fa-solid fa-backward"></i></div>
+                <div id="playBtn"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+                <div><i class="fa-solid fa-forward"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript link file  -->
+    <script src="JS/script.js"></script>
+</body>
+
+</html>
